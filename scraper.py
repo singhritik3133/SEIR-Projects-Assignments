@@ -61,8 +61,10 @@ def main():
   print(body)
 
   links=get_links(soup)
-  for l in links:
-    print(l)
+  if len(links) > 0:
+    print(links[0])
+  else:
+    print("No outLinks Found")
 
 if __name__=="__main__":
   main()
